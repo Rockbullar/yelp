@@ -1,4 +1,5 @@
-<%= simple_form_for [@restaurant, @review] do |f| %>
+<%= simple_form_for([@restaurant, @review]) do |f| %>
   <%= f.input :content %>
-  <% f.submit class: "btn btn-success" %>
+  <%= f.input :rating, class:"form-range", min:"0", max:"5", id:"customRange2" %>
+  <%= f.submit class: "btn btn-success" %>
 <% end %>

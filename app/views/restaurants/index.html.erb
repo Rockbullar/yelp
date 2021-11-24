@@ -2,13 +2,13 @@
 
 <h1>Restaurants</h1>
 
-<table>
+<table class="table table-dark table-hover">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Phone Number</th>
-      <th>Category</th>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Category</th>
       <th colspan="4"></th>
     </tr>
   </thead>
@@ -16,13 +16,13 @@
   <tbody>
     <% @restaurants.each do |restaurant| %>
       <tr>
-        <td><%= restaurant.name %></td>
-        <td><%= restaurant.address %></td>
-        <td><%= restaurant.phone_number %></td>
-        <td><%= restaurant.category %></td>
-        <td><%= link_to 'Show', restaurant %></td>
-        <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
-        <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td scope="row"><%= restaurant.name %></td>
+        <td scope="row"><%= restaurant.address %></td>
+        <td scope="row"><%= restaurant.phone_number %></td>
+        <td scope="row"><%= restaurant.category %></td>
+        <td scope="row"><%= link_to 'Show', restaurant %></td>
+        <td scope="row"><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
+        <td scope="row"><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
